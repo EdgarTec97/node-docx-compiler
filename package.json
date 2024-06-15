@@ -1,7 +1,7 @@
 {
   "name": "compile-word-handlebars",
   "version": "1.0.0",
-  "description": "App to Compile Word File With Handlebars",
+  "description": "App to Compile Docx File With Handlebars",
   "main": "index.js",
   "author": "Edgar Castillo Vega",
   "license": "MIT",
