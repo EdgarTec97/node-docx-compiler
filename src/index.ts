@@ -8,6 +8,9 @@ import { resolve, dirname } from "path";
     inputPath: `${publicPath}/file.docx`,
     metadata: {
       name: "Soporte",
+      database: "MongoDB",
+      boss: "Github",
+      compile: "DocxSerializer",
     },
     outputPath: `${publicPath}/compiled.docx`,
   };
