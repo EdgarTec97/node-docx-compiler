@@ -1,7 +1,7 @@
 import fs from "fs";
 import PizZip from "pizzip";
 import Docxtemplater from "docxtemplater";
-import Handlebars from "handlebars";
+//import Handlebars from "handlebars";
 import { ISerializer } from "@/domain/serializer.interface";
 import { GlobalParams } from "@/domain/global.types";
 
@@ -18,15 +18,8 @@ export class DOCXSerializer implements ISerializer<Docxtemplater> {
 
     this.zipService = new PizZip(content);
     this.template = new Docxtemplater(this.zipService, {
-      parser: (tag) => {
-        const reg = /(?:{{)(.*?)(?:}})/g;
-        const matches = reg.exec(tag);
-        return {
-          get(scope) {
-            return Handlebars.compile(matches?.[1] || "")(scope);
-          },
-        };
-      },
+      paragraphLoop: true,
+      linebreaks: true,
     });
   }
 
