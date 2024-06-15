@@ -1,0 +1,9 @@
+node_modules
+build
+backups
+.DS_Store
+.env
+.vscode
+logs
+yarn-error.log
+*.DS_Store
